@@ -18,7 +18,6 @@ const DetailedPage = () => {
             gridTemplateColumns: { xs: "1fr", md: "2fr 1fr" },
             gap: "1.5rem",
             padding: "1rem",
-            fontFamily: "Arial, sans-serif",
           }}
         >
           <GallerySection selectedPropertDetail={selectedPropertDetail} />
