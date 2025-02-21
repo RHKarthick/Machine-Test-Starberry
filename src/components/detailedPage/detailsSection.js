@@ -12,9 +12,8 @@ import { FavoriteBorder, Share } from "@mui/icons-material";
 
 const DetailsSection = (props) => {
   const { selectedPropertDetail } = props;
-
   return (
-    <Grid container spacing={2}>
+    <Grid>
       <Grid item xs={12}>
         <Stack
           direction="row"
@@ -47,7 +46,7 @@ const DetailsSection = (props) => {
           <Link
             href="#contact"
             underline="always"
-            sx={{ color: "#D66D3C", mt: 1, display: "inline-block" }}
+            sx={{ color: "#FFD700", mt: 1, textDecorationColor: "gold" }}
           >
             Please contact us
           </Link>
@@ -58,7 +57,7 @@ const DetailsSection = (props) => {
               backgroundColor: "#333333",
               color: "#fff",
               px: 4,
-              width: "90%",
+              width: "100%",
             }}
           >
             Contact Agent
@@ -66,9 +65,12 @@ const DetailsSection = (props) => {
         </Stack>
       </Grid>
 
-      <Grid item xs={12}>
+      <Grid item xs={12} sx={{ pt: 2 }}>
         <Stack spacing={1}>
-          <Typography variant="h6" sx={{ borderBottom: "2px solid #ccc", mb: 2 }}>
+          <Typography
+            variant="h6"
+            sx={{ borderBottom: "2px solid #ccc", mb: 2 }}
+          >
             Facts & Features
           </Typography>
           <Typography variant="body2">
@@ -99,10 +101,22 @@ const DetailsSection = (props) => {
               View Floorplan
             </Link>
           </Typography>
+          <Typography
+            variant="body2"
+            sx={{
+              pt: 2,
+              fontWeight: 300,
+              height: "100px",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+            }}
+          >
+            {selectedPropertDetail.attributes.description}
+          </Typography>
         </Stack>
       </Grid>
 
-      <Grid item xs={12}>
+      <Grid item xs={12} sx={{ pt: 2 }}>
         <Stack direction="row" spacing={2} alignItems="center">
           <Avatar
             src={selectedPropertDetail.attributes.crm_negotiator_id.profile_img}
@@ -128,14 +142,13 @@ const DetailsSection = (props) => {
         </Stack>
       </Grid>
 
-      <Grid item xs={12}>
+      <Grid item xs={12} sx={{ pt: 2 }}>
         <Stack
           alignItems="center"
           justifyContent="center"
           sx={{
             backgroundColor: "#eaeaea",
-            height: "90px",
-            borderRadius: 2,
+            minHeight: { xs: "100px", sm: "100px", md: "200px" },
           }}
         >
           Map Section
