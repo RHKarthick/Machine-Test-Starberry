@@ -17,7 +17,6 @@ const PropertyPage = () => {
 
   return (
     <div>
-      {/* Header */}
       <Sections heading="Header" size={2} />
       <Typography variant="h5" align="center" sx={{ my: 4 }}>
         Property for Sales
@@ -43,6 +42,7 @@ const PropertyPage = () => {
                     textAlign: "center",
                     backgroundColor: "transparent",
                     boxShadow: "none",
+                    cursor: "pointer",
                   }}
                   onClick={() => handleClickCards(property.attributes.crm_id)}
                 >
