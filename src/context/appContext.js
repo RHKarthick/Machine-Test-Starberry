@@ -20,7 +20,7 @@ export const AppProvider = ({ children }) => {
           "https://mira-strapi-dev.q.starberry.com/api/properties/?_limit=50"
         );
         const data = response.data.data;
-        setProperties(data); // Ensure the API response matches expected structure
+        setProperties(data); 
         setLoading(false);
       } catch (error) {
         console.error("Error fetching properties:", error);
