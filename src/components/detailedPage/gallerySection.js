@@ -2,20 +2,10 @@ import React, { useState } from "react";
 import { Grid, Card, CardMedia } from "@mui/material";
 import ImageViewer from "react-simple-image-viewer";
 
-const GallerySection = ({ selectedPropertDetail }) => {
+const GallerySection = (props) => {
+  const { openImageViewer,closeImageViewer,isViewerOpen,currentImage,selectedPropertDetail } = props;
   const images = selectedPropertDetail?.attributes?.images || [];
-  const [isViewerOpen, setIsViewerOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState(0);
-
-  const openImageViewer = (index) => {
-    setCurrentImage(index);
-    setIsViewerOpen(true);
-  };
-
-  const closeImageViewer = () => {
-    setIsViewerOpen(false);
-  };
-
+  
   return (
     <>
       <Grid container direction="column" spacing={2}>

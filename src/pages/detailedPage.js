@@ -6,7 +6,13 @@ import DetailsSection from "../components/detailedPage/detailsSection";
 import GallerySection from "../components/detailedPage/gallerySection";
 
 const DetailedPage = () => {
-  const { selectedPropertDetail } = useAppContext();
+  const {
+    openImageViewer,
+    closeImageViewer,
+    isViewerOpen,
+    currentImage,
+    selectedPropertDetail,
+  } = useAppContext();
   return (
     <div>
       <Sections heading="Header" size={2} />
@@ -19,7 +25,13 @@ const DetailedPage = () => {
           }}
         >
           <Grid item xs={12} md={7}>
-            <GallerySection selectedPropertDetail={selectedPropertDetail} />
+            <GallerySection
+              openImageViewer={openImageViewer}
+              closeImageViewer={closeImageViewer}
+              isViewerOpen={isViewerOpen}
+              currentImage={currentImage}
+              selectedPropertDetail={selectedPropertDetail}
+            />
           </Grid>
           <Grid item xs={12} md={4.5}>
             <DetailsSection selectedPropertDetail={selectedPropertDetail} />
