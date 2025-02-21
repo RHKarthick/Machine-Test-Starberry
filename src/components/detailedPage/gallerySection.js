@@ -41,7 +41,7 @@ const GallerySection = ({ selectedPropertDetail }) => {
               <CardMedia
                 component="img"
                 image={image.url}
-                alt={`Property Image ${index + 2}`}
+                alt="property img"
                 sx={{ borderRadius: 1, width: "100%", cursor: "pointer" }}
                 onClick={() => openImageViewer(index + 1)}
               />

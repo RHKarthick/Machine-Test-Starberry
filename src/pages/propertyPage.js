@@ -63,10 +63,6 @@ const PropertyPage = () => {
                       sx={{
                         height: "40px", 
                         overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        display: "-webkit-box",
-                        WebkitLineClamp: 2, 
-                        WebkitBoxOrient: "vertical",
                       }}
                     >
                       {property.attributes.slug}
